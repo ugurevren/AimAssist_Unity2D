@@ -17,7 +17,10 @@ This implementation is inspired by @t3ssel8r's research and video on aim assist 
 1. Attach the `AimAssist` script to a GameObject, such as the player.  
 2. Assign the list of enemies (`Transform[] _enemies`) via the Unity Inspector.  
 3. Configure parameters like `_maxCorrection`, `_maxAngle`, and `_smoothing` in the Inspector to suit your game.  
-4. Use the `AssistedAim` method in your player controller script to apply aim correction dynamically.  
+4. Use the `AssistedAim` method in your player controller script to apply aim correction dynamically.
+
+### Update Notes
+- **AimAssist.cs** now includes Remove Enemy and Set Aim Assist Values functions
 
 ### Example Usage
 - **AimAssist.cs** also includes an example usage that you can check out.
