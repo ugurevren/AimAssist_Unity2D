@@ -164,8 +164,27 @@ public class AimAssist : MonoBehaviour
                 assistedAim = playerAimAngle;
             }
         }
-
+        
         return assistedAim;
+    }
+    
+    public void RemoveEnemy(Transform enemy)
+    {
+        if(enemies.Contains(enemy))
+        {
+            enemies.Remove(enemy);
+        }
+        if (_targets.Contains(enemy))
+        {
+            _targets.Remove(enemy);
+        }
+    }
+    
+    public void SetAimAssistValues(float maxCorrection, float maxAngle, float smoothing)
+    {
+        _maxCorrection = maxCorrection;
+        _maxAngle = maxAngle;
+        _smoothing = smoothing;
     }
 
     #endregion
